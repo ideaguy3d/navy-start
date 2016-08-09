@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>3D Task App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="julius-app/libs/font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="julius-app/libs/angular-material/angular-material.css">
+    <link rel="stylesheet" href="julius-app/libs/angular-material-icons/angular-material-icons.css">
+    <link rel="stylesheet" href="julius-app/libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+
+
+<!-- 3. Display the application -->
+<body>
+
+<!-- zPrimary wrapper element -->
+<div id="ngattack" ng-controller="ngattackMainCtrl" layout="row" ng-cloak>
+    <!-- zSide Navigation -->
+    <div ng-include="'julius-app/views/jsidenav.html'" layout="vertical"></div>
+
+    <div ng-switch="landingState">
+        <div ng-switch-when="show3Dapp1">
+            <!-- z3D Content Area -->
+            <div layout="column" flex id="main-wrapper">
+                <h1>&nbsp;&nbsp;&nbsp;3D Task App Prototype</h1>
+                <h2 id="jh2">&nbsp;&nbsp;&nbsp;You get the idea of what this app would do once I got AngularJS to communicate w/the
+                    WebGL :)</h2>
+                <h3 id="jh3">&nbsp;&nbsp;&nbsp;The WebGL will take about 60secs to load, so please be patient. Click the "Tasks" when it does load, then click on the tasks to see more details ^_^</h3>
+
+                <md-content class="z3d-app-wrapper">
+                    <iframe src="j3dMenu/index.html" class="z3d-app"></iframe>
+                </md-content>
+            </div>
+        </div>
+        <div ng-switch-default class="container">
+            <h1>Welcome to Julius3D Studio's</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, dolor dolores doloribus dolorum eos
+                fugit ipsa nam necessitatibus nostrum nulla numquam odit perspiciatis quae quibusdam quidem, sint ut,
+                veniam voluptas.</p>
+        </div>
+    </div>
+
+
+</div>
+
+<!------ footer ------>
+<div class="jfooter">
+    <div class="jcenter">
+        <h1>
+            Built by
+            <a href="https://juliusalvarado.info" target="_blank">
+                <i class="fa fa-code"></i>j.Alvarado()<i class="fa fa-code"></i>
+            </a>
+            for the <a href="http://www.angularattack.com" target="_blank">AngularAttack</a> hack-a-thon
+        </h1>
+    </div>
+    <div id="j-gif-anim" class="jcenter">
+        <img src="img/ajax-loader1.gif" alt="julius-gif">
+        <img src="img/julius-anim-gif.gif" alt="julius-gif">
+        <img src="img/ajax-loader1.gif" alt="julius-gif">
+    </div>
+</div>
+
+<!-- zLibraries -->
+<script src="julius-app/libs/jquery/dist/jquery.min.js"></script>
+<script src="julius-app/libs/angular/angular.min.js"></script>
+<script src="julius-app/libs/angular-animate/angular-animate.min.js"></script>
+<script src="julius-app/libs/angular-aria/angular-aria.js"></script>
+<script src="julius-app/libs/angular-material/angular-material.min.js"></script>
+<script src="julius-app/libs/angular-messages/angular-messages.min.js"></script>
+<script src="julius-app/libs/angular-material-icons/angular-material-icons.min.js"></script>
+
+<!-- julius' javascript code -->
+<script src="julius-app/j-app.js"></script>
+<script src="julius-app/controllers/ngattackMainCtrl.js"></script>
+<script src="julius-app/services/taskService.js"></script>
+
+
+<script type="text/javascript" async>
+    // let's wait for a bit before letting angulars'
+    //material design freeze up the page to watch an animation
+    setTimeout(function () {
+        angular.bootstrap('#ngattack', ['juliusNgAttackApp']);
+    }, 800);
+    setTimeout(function () {
+        jQuery('#j-gif-anim').css("display", "none");
+    }, 3000);
+</script>
+
+
+</body>
+</html>

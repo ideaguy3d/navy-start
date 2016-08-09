@@ -1,0 +1,367 @@
+/* This is the styling for
+ my ngMaterial app */
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*color: floralwhite !important;*/
+}
+
+#jh2, #jh3 {
+    margin: 2px;
+}
+
+body > div.column > md-content {
+    color: #5d5d5d;
+}
+
+md-toolbar h1,
+md-toolbar h2,
+md-toolbar h3,
+md-toolbar h4 {
+    color: floralwhite;
+    text-align: center;
+}
+
+.jcenter {
+    text-align: center;
+}
+
+.jcenter h1 {
+    padding-bottom: 8px;
+}
+
+.jfooter {
+    display: block;
+    background-color: cornflowerblue;
+    vertical-align: middle;
+    position: absolute;
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: auto;
+    color: whitesmoke;
+    padding-top: 10px;
+
+}
+
+.jfooter h1{
+    vertical-align: middle;
+}
+
+.jfooter a {
+    padding: 4px;
+    margin: 4px;
+    color: black;
+    text-decoration: none;
+    border: black 2px solid;
+}
+
+.jfooter:before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+md-toolbar .jblack{
+    color: #5d5d5d !important;
+}
+
+md-toolbar h1 {
+    font-size: 2.2em;
+    font-weight: 300;
+    margin: auto;
+}
+
+md-toolbar .md-toolbar-tools h1 {
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+md-list .md-button {
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    color: #1c1c1c;
+}
+
+md-list .md-button.selected {
+    color: #01f458;
+}
+
+md-sidenav md-list {
+    padding-bottom: 12px;
+}
+
+.jblack {
+    color: #5d5d5d !important;
+}
+
+.avatar {
+    width: 128px;
+    height: 128px;
+    position: relative;
+    border: 2px solid indianred;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    vertical-align: middle;
+    zoom: 0.7;
+    transform: translateZ(0) scale(0.8);
+}
+
+.scrollable-nav-content {
+    position: absolute;
+    top: 136px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+#content {
+    padding: 6px 42px;
+}
+
+span.name {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-left: 6px;
+}
+
+md-dialog {
+    color: #434343;
+}
+
+.date-row {
+    margin: 16px 0px;
+}
+
+#main-wrapper {
+    min-height: 800px;
+}
+
+.z3d-app-wrapper {
+    text-align: center;
+}
+
+.z3d-app {
+    border: solid 2px black;
+    width: 960px;
+    height: 600px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+/* =============================== */
+/* ======== jchat styling ======== */
+/* =============================== */
+
+.page-wrapper {
+    max-width:550px;
+    margin-right: auto;
+    margin-left: auto;
+    padding:15px;
+}
+
+.page-wrapper .logo-img {
+    margin-top:-10px;
+}
+
+
+.main {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+}
+
+.sidebar {
+    display:inline-block;
+    width:19.5%;
+    vertical-align: top;
+    height:100%;
+    background:#4d394b;
+    position:relative;
+    overflow-y:scroll;
+    padding-bottom:100px;
+}
+
+.sidebar .slack-name {
+    background:#3E313C;
+    padding:15px 0px 15px 15px;
+}
+
+.sidebar .slack-name h2{
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.sidebar .channel-list {
+    margin-top:20px;
+    background:#4d394b;
+    position:relative;
+}
+
+.sidebar .channel-list .channel a{
+    display:block;
+    color:rgba(255,255,255,0.6);
+    padding:3px 0px 3px 15px;
+    width:90%;
+    font-weight:300;
+
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.sidebar .channel-list .channel a:hover{
+    text-decoration: none;
+    background:#3E313C;
+}
+
+.sidebar .channel-list .channel a.selected{
+    background:#4c9689;
+    color:#fff;
+    text-decoration: none !important;
+}
+
+.sidebar .channel-list .channel.create {
+    font-style: italic;
+}
+
+.sidebar .channel-list .list-head {
+    margin-top:10px;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.sidebar .my-info {
+    position:fixed;
+    bottom:0;
+    padding:15px;
+    background:#3E313C;
+    width:19.5%;
+}
+
+.sidebar .my-info .user-pic {
+    display: inline-block;
+    vertical-align: top;
+    width:44px;
+    height:44px;
+    border-radius:4px;
+}
+
+.sidebar .my-info .user-info {
+    padding-left:5px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sidebar .my-info .user-info .user-name {
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.sidebar .my-info .user-info .options {
+    color:#999;
+    font-size:12px;
+}
+
+.sidebar .my-info .user-info .options a{
+    color:#999;
+    font-size:12px;
+}
+
+.sidebar .presence {
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #ab9ba9;
+    vertical-align: middle;
+}
+
+.sidebar .presence.online {
+    background: #99d04a;
+}
+
+.message-pane {
+    display:inline-block;
+    vertical-align: top;
+    height:100%;
+    width:80%;
+    overflow-y:scroll;
+    padding:55px 15px 65px 15px;
+}
+
+.message-pane .header {
+    position:fixed;
+    top:0;
+    background:#fff;
+    width:100%;
+    z-index:2;
+}
+
+.message-pane .header h1 {
+    padding:12px 0 10px 0;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size:24px;
+    color:#555459;
+    font-weight:900;
+}
+
+.message-pane .message-form {
+    position:fixed;
+    bottom:0;
+    padding:0 15px 15px 0;
+    background:#fff;
+    width:79%;
+}
+
+.message-pane .message-wrap {
+    position:relative;
+    margin-top:15px;
+}
+
+.message-pane .message-wrap .user-pic {
+    width:36px;
+    height:36px;
+    border-radius:4px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.message-pane .message-wrap .message-info {
+    display: inline-block;
+    vertical-align: top;
+    padding-left:5px;
+}
+
+.message-pane .message-wrap .message-info .user-name {
+    color:#555459;
+    font-weight:900;
+}
+
+.message-pane .message-wrap .message-info .user-name span{
+    color:#ccc;
+    font-weight: normal;
+    font-size:10px;
+}

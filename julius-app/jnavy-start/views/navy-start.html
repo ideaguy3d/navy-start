@@ -1,0 +1,144 @@
+<div class="navy">
+    <!-- jSlider Presentation Starts -->
+    <div class="slider">
+        <!-- 1st slide -->
+        <div class="slide active-slide">
+            <div class="container">
+                <div class="row">
+                    <!-- left side -->
+                    <div class="slide-copy col-xs-5">
+                        <h1>Define the mission of the Navy.</h1>
+                        <p>The mission of the United States Navy is to protect and defend the right of the United States and our allies to move freely on the oceans and protect our country against her enemies.</p>
+                    </div>
+                    <!-- right side -->
+                    <div class="slide-img col-xs-7">
+                        <img src="https://c1.staticflickr.com/9/8576/27990592174_4422b8701a_z.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2nd slide -->
+        <div class="slide slide-feature">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="#">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Seal_of_the_United_States_Department_of_the_Navy.svg/2000px-Seal_of_the_United_States_Department_of_the_Navy.svg.png"
+                            width="200">
+                        </a>
+                        <a href="#">Standards Transition Acknowledgment Requirements Training</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 3rd slide -->
+        <div class="slide">
+            <div class="container">
+                <div class="row">
+                    <!-- left side -->
+                    <div class="slide-copy col-xs-5">
+                        <h1>Navy Core Values</h1>
+                        <h2>Define Honor.</h2>
+                        <p>"I will bear true faith and allegiance..." I am accountable for my professional and personal behavior. I will be mindful of the privilege I have to serve my fellow Americans.</p>
+                    </div>
+                    <!-- right side -->
+                    <div class="slide-img col-xs-7">
+                        <img src="https://c1.staticflickr.com/9/8576/27990592174_4422b8701a_z.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 4th slide -->
+        <div class="slide">
+            <div class="container">
+                <div class="row">
+                    <!-- left side -->
+                    <div class="slide-copy col-xs-5">
+                        <h1>Define the mission of the Navy.</h1>
+                        <p>The mission of the United States Navy is to protect and defend the right of the United States and our allies to move freely on the oceans and protect our country against her enemies.</p>
+                    </div>
+                    <!-- right side -->
+                    <div class="slide-img col-xs-7">
+                        <img src="https://c1.staticflickr.com/9/8576/27990592174_4422b8701a_z.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="slider-nav">
+        <a href="#" class="arrow-prev">
+            <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png">
+        </a>
+        <ul class="slider-dots">
+            <li class="dot active-dot">&bull;</li>
+            <li class="dot">&bull;</li>
+            <li class="dot">&bull;</li>
+            <li class="dot">&bull;</li>
+        </ul>
+        <a href="#" class="arrow-next">
+            <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png">
+        </a>
+    </div>
+
+</div>
+
+<script language="javascript">
+    (function($){
+
+        var main = function() {
+            $('.dropdown-toggle').click(function(e) {
+                e.preventDefault();
+                $('.dropdown-menu').toggle();
+            });
+
+
+            $('.arrow-next').click(function(e) {
+                e.preventDefault();
+                var currentSlide = $('.active-slide');
+                var nextSlide = currentSlide.next();
+
+                var currentDot = $('.active-dot');
+                var nextDot = currentDot.next();
+
+                if(nextSlide.length === 0) {
+                    nextSlide = $('.slide').first();
+                    nextDot = $('.dot').first();
+                }
+
+                currentSlide.fadeOut(1600).removeClass('active-slide');
+                nextSlide.fadeIn(1600).addClass('active-slide');
+
+                currentDot.removeClass('active-dot');
+                nextDot.addClass('active-dot');
+            });
+
+
+            $('.arrow-prev').click(function(e) {
+                e.preventDefault();
+                var currentSlide = $('.active-slide');
+                var prevSlide = currentSlide.prev();
+
+                var currentDot = $('.active-dot');
+                var prevDot = currentDot.prev();
+
+                if(prevSlide.length === 0) {
+                    prevSlide = $('.slide').last();
+                    prevDot = $('.dot').last();
+                }
+
+                currentSlide.fadeOut(1600).removeClass('active-slide');
+                prevSlide.fadeIn(1600).addClass('active-slide');
+
+                currentDot.removeClass('active-dot');
+                prevDot.addClass('active-dot');
+            });
+
+        }
+
+        $(document).ready(main);
+
+    })(jQuery);
+</script>
