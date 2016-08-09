@@ -59,7 +59,7 @@ angular.module('jchat').config(['$stateProvider',
                                     }
                                 });
                         }, function (err) {
-                            $state.go('home');
+                            $state.go('register');
                         })
                     }
                 },
