@@ -12,7 +12,9 @@ angular.module('jchat').controller('ProfileCtrl', ['$state', 'md5', 'auth', 'pro
             console.log("jha - auth.password = "+auth.password);
             console.log("jha - auth.password.email = "+auth.password.email);
             profileCtrl.profile.emailHash = md5.createHash(auth.password.email);
-            profileCtrl.profile.$save();
+            profileCtrl.profile.$save().then(function () {
+                $state.go('channels');
+            });
         }
     }]
 );

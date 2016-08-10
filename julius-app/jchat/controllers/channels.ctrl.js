@@ -13,9 +13,21 @@ angular.module('jchat').controller('ChannelsCtrl', ['$state','jAuth',
         channelsCtrl.getDisplayName = jUsers.getDisplayName;
         channelsCtrl.getGravatar = jUsers.getGravatar;
 
+        channelsCtrl.newChannel = {
+            name: ''
+        };
+
         channelsCtrl.logout = function () {
             jAuth.$unauth();
             $state.go('home');
+        };
+
+        channelsCtrl.createChannel = function () {
+            channelsCtrl.channels.$add(channelsCtrl.newChannel).then(function () {
+                channelsCtrl.newChannel = {
+                    name: ''
+                }
+            });
         }
     }
 ]);

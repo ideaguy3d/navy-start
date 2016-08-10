@@ -42,8 +42,8 @@ angular.module('jchat').config(['$stateProvider',
                 templateUrl: 'julius-app/jchat/views/profile.html'
             })
             .state('channels', {
-                templateUrl: '',
-                controller: '',
+                templateUrl: 'julius-app/jchat/views/channels.html',
+                controller: 'ChannelsCtrl as channelsCtrl',
                 resolve: {
                     channels: function (jChannels) {
                         return jChannels.$loaded();
@@ -64,6 +64,11 @@ angular.module('jchat').config(['$stateProvider',
                     }
                 },
                 url: '/jchat/channels'
+            })
+            .state('channels.create', {
+                url: '/jchat/channels/create',
+                templateUrl: 'julius-app/jchat/views/create.html',
+                controller: 'ChannelsCtrl as channelsCtrl'
             });
     }]
 ).constant('FirebaseUrl', 'https://julius.firebaseio.com/');
