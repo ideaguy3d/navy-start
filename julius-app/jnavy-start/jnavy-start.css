@@ -6,7 +6,7 @@ START slides feature
 /* Header */
 
 .header {
-    /*background-color: rgba(255, 255, 255, 0.95);*/
+    background-color: rgba(255, 255, 255, 0.95);
     /*border-bottom: 1px solid #ddd;*/
     font-weight: 300;
     font-size: 17px;
@@ -109,7 +109,7 @@ START slides feature
 
 .slide-feature {
     text-align: center;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f2/US_Navy_090615-N-0000X-283_Republic_of_Singapore_Navy_and_U.S._Navy_ships_maneuver_together_during_during_the_at-sea_phase_of_Cooperation_Afloat_Readiness_and_Training_(CARAT)_2009.jpg');
+    background-image: url(../../img/ships1.jpeg);
     height: 470px;
 }
 
@@ -121,8 +121,7 @@ START slides feature
 .slide-feature a {
     display: block;
     color: #ffffff;
-    font-family: "HelveticaNeueMdCn", Helvetica, sans-serif;
-    font-family: 'Oswald', sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-weight: 400;
     font-size: 50px;
     text-shadow: 2px 2px #000000;

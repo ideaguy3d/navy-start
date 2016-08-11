@@ -27,7 +27,7 @@ angular.module('jchat').config(['$stateProvider',
             .state('profile', {
                 urL: '/jchat/profile',
                 resolve: {
-                    auth: function($state, jAuth) {
+                    auth: function ($state, jAuth) {
                         return jAuth.$requireAuth().catch(function () {
                             $state.go('home');
                         });
@@ -52,7 +52,7 @@ angular.module('jchat').config(['$stateProvider',
                         return jAuth.$requireAuth().then(function (auth) {
                             return jUsers.getProfile(auth.uid).$loaded()
                                 .then(function (profile) {
-                                    if(profile.displayName) {
+                                    if (profile.displayName) {
                                         return profile;
                                     } else {
                                         $state.go('profile');
@@ -69,6 +69,19 @@ angular.module('jchat').config(['$stateProvider',
                 url: '/jchat/channels/create',
                 templateUrl: 'julius-app/jchat/views/create.html',
                 controller: 'ChannelsCtrl as channelsCtrl'
+            })
+            .state('channels.messages', {
+                url: '/jchat/{channelId}/messages',
+                resolve: {
+                    messages: function ($stateParams, jMessages) {
+                        return jMessages.forChannel($stateParams.channelId).$loaded();
+                    },
+                    channelName: function ($stateParams, channels) {
+                        return '#'+channels.$getRecord($stateParams.channelId).name;
+                    }
+                },
+                templateUrl: 'julius-app/jchat/views/messages.html',
+                controller: 'MessagesCtrl as messagesCtrl'
             });
     }]
 ).constant('FirebaseUrl', 'https://julius.firebaseio.com/');
